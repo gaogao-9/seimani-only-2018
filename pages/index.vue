@@ -1,17 +1,7 @@
 <template>
   <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        seimani-only-2018
-      </h1>
-      <h2 class="subtitle">
-        政剣マニフェスティアオンリーイベント2018公式サイトです
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
-      </div>
+    <div class="logoContainer">
+      <logo class="logo" />
     </div>
   </section>
 </template>
@@ -26,33 +16,31 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .container {
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-image: url("/assets/img/teaser_bg.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.logoContainer {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: flex-end;
 }
 
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.logo {
+  margin-bottom: 3rem;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+@media screen and (orientation: landscape) {
+  .container {
+    background-size: contain;
+  }
 }
 </style>
