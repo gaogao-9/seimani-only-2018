@@ -9,7 +9,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "_generate": "cross-env NODE_ENV=production nuxt generate",
-    "generate": "npm run _generate && cp ./generator/.git ./dist/.git && cp ./generator/CNAME ./dist/CNAME",
+    "generate": "npm run _generate && cp ./generator/.git.tmp ./dist/.git && cp ./generator/CNAME.tmp ./dist/CNAME",
     "lint": "eslint --fix --ext .js,.vue --ignore-path .eslintignore .gitignore .",
     "precommit": "npm run lint"
   },
