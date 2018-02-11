@@ -76,6 +76,10 @@ export default {
 			&:not(:first-of-type) {
 				border-top: none;
 			}
+			
+			& img {
+				vertical-align: bottom;
+			}
 		}
 	}
 }
