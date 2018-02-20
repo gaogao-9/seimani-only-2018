@@ -21,6 +21,8 @@ export default {
 		menus: [
 			"top",
 			"access",
+			"staff",
+			"question",
 		].map((name) => ({
 			name,
 			link: (name === "top") ? "/" : `/${name}/`,
@@ -71,7 +73,12 @@ export default {
 		& li {
 			box-sizing: border-box;
 			border: solid 2px rgb(19, 51, 97);
+			transition: 0.2s background-color ease;
 			overflow: hidden;
+			
+			&:hover {
+				background-color: #352323;
+			}
 			
 			&:not(:first-of-type) {
 				border-top: none;

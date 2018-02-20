@@ -27,7 +27,7 @@ export default {
 
 .logo{
   text-align: center;
-  font-size : 7vw;
+  font-size : 4.94vw;
   font-family: "Makinas-Scrap-5";
   line-height: 1.25;
   opacity: 0;
@@ -36,11 +36,5 @@ export default {
 .logo.show {
   transition: 1s opacity ease;
   opacity: 1;
-}
-
-@media screen and (orientation: landscape) {
-  .logo {
-    font-size: 2.5rem;
-  }
 }
 </style>

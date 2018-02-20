@@ -1,6 +1,6 @@
 <template>
-	<frame-template :title="title">
-		<div slot="main">
+	<frame-template>
+		<card :title="title">
 			<div class="mapContainer">
 				<iframe class="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJq3FUxZhgGGAR-_WCfU-yC6Q&destination=日本神奈川県川崎市幸区堀川町６６−２０+経済労働局川崎市産業振興会館&mode=walking&key=AIzaSyAAaCUU3jjAQggZTpe8AE_6DQxQ6TP8cLA" allowfullscreen></iframe>
 				<div class="text">
@@ -12,12 +12,13 @@
 					<p>公式サイトによる案内は<a target="_blank" href="http://www.kawasaki-net.ne.jp/kaikan/access.html">こちら</a></p>
 				</div>
 			</div>
-		</div>
+		</card>
 	</frame-template>
 </template>
 
 <script>
 import FrameTemplate from "~/components/FrameTemplate.vue";
+import Card from "~/components/Card.vue";
 
 export default {
 	data: () => ({
@@ -25,6 +26,7 @@ export default {
 	}),
 	components: {
 		FrameTemplate,
+		Card,
 	},
 };
 </script>

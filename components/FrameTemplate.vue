@@ -3,13 +3,7 @@
 		<el-container>
 			<el-header><main-header :isAsideOpened="isAsideOpened"></main-header></el-header>
 			<el-main>
-				<div class="card">
-					<template v-if="title">
-						<h1>{{ title }}</h1>
-						<hr>
-					</template>
-					<slot name="main"></slot>
-				</div>
+				<slot></slot>
 			</el-main>
 			<el-footer><main-footer></main-footer></el-footer>
 		</el-container>
@@ -26,12 +20,6 @@ export default {
 	computed: {
 		isAsideOpened() {
 			return this.$store.state.aside.isOpen;
-		},
-	},
-	props: {
-		title: {
-			type: String,
-			default: "",
 		},
 	},
 	components: {
@@ -80,6 +68,7 @@ export default {
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
+	box-sizing: border-box;
 	z-index: 1000;
 	background-image:
 		linear-gradient(transparent 80%, rgba(255, 255, 255, 0.3) 80%, rgba(255, 255, 255, 0.3) 100%),
@@ -91,8 +80,11 @@ export default {
 	&>* {
 		width: 280px;
 		height: 100%;
-		min-height: 300px;
 		transition: width 0.2s ease-out 0s;
+		
+		&:not(:first-child) {
+			margin-top: 15px;
+		}
 	}
 }
 
@@ -138,23 +130,6 @@ export default {
 @media screen and (min-width:1240px) {
 	.el-main>* {
 		width: 1000px;
-	}
-}
-
-.card {
-	box-sizing: border-box;
-	padding: 10px;
-	background-color: white;
-	border: 1px solid #ccc;
-	border-radius: 10px;
-	box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.2);
-	
-	& h1 {
-		margin: 5px;
-	}
-	
-	& hr {
-		margin-bottom: 10px;
 	}
 }
 </style>

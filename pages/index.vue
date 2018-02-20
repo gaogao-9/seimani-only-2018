@@ -1,26 +1,32 @@
 <template>
-	<frame-template :title="title">
-		<div class="mainContainer" slot="main">
+	<frame-template>
+		<card class="mainContainer">
 			<div class="bgContainer">
 				<img class="bg" :src="bg">
 			</div>
 			<logo></logo>
-			<div class="chara syerobu"></div>
-			<div class="chara hirari"></div>
-		</div>
+			<div class="chara syerobu" :class="{show: isShow}"></div>
+			<div class="chara hirari" :class="{show: isShow}"></div>
+		</card>
 	</frame-template>
 </template>
 
 <script>
 import FrameTemplate from "~/components/FrameTemplate.vue";
+import Card from "~/components/Card.vue";
 import Logo from "~/components/Logo.vue";
 
 export default {
 	data: () => ({
 		bg: require("~/assets/img/teaser_bg.jpg"),
+		isShow: false,
 	}),
+	mounted() {
+		this.isShow = true;
+	},
 	components: {
 		FrameTemplate,
+		Card,
 		Logo,
 	},
 };
@@ -29,8 +35,6 @@ export default {
 <style scoped>
 .mainContainer {
 	position: relative;
-	width: 100%;
-	height: 100%;
 	
 	& .logo {
 		display: flex;
@@ -45,9 +49,14 @@ export default {
 		width: 200px;
 		background-size: contain;
 		background-repeat: no-repeat;
+		display: none;
+		
+		&.show {
+			display: block;
+		}
 		
 		&.syerobu {
-			top: 0px;
+			top: 25px;
 			left: -50px;
 			height: 246px;
 			animation: up-down-syerobu 2s ease-in-out 0s infinite alternate;
@@ -55,7 +64,7 @@ export default {
 		}
 		
 		&.hirari {
-			bottom: 0px;
+			bottom: 25px;
 			right: -50px;
 			height: 255px;
 			animation: up-down-hirari 2s ease-in-out 0s infinite alternate;
@@ -67,11 +76,12 @@ export default {
 		display: flex;
 		align-items: flex-end;
 		position: absolute;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		width: 100%;
-		height: 100%;
+		top: 10px;
+		left: 10px;
+		right: 10px;
+		bottom: 10px;
+		width: calc(100% - 20px);
+		height: calc(100% - 20px);
 		overflow: hidden;
 		& .bg {
 			position: relative;
@@ -153,19 +163,19 @@ export default {
 
 @keyframes up-down-syerobu {
 	100% {
-		top: 25px;
+		top: -25px;
 	}
 	0% {
-		top: -25px;
+		top: 25px;
 	}
 }
 
 @keyframes up-down-hirari {
 	100% {
-		bottom: 25px;
+		bottom: -25px;
 	}
 	0% {
-		bottom: -25px;
+		bottom: 25px;
 	}
 }
 
