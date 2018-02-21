@@ -92,7 +92,12 @@ export default {
 		},
 	},
 	mounted() {
-		this.isShow = true;
+		// 雑実装
+		setTimeout(() => {
+			this.$nextTick(() => {
+				this.isShow = true;
+			});
+		}, 0);
 
 		// 雑実装
 		setTimeout(() => {
@@ -108,10 +113,10 @@ export default {
 
 <style scoped>
 .fadedetail-enter-active {
-  transition: opacity .5s;
+  transition: opacity 0.2s linear 0s;
 }
 
-.fadedetail-enter, .fade-leave-to {
+.fadedetail-enter {
   opacity: 0;
 }
 
@@ -222,7 +227,7 @@ export default {
 				padding: 0;
 				opacity: 0;
 				transition:
-					opacity 1.0s linear 0s,
+					opacity 0.5s linear 0s,
 					top 0.3s ease-out 0.7s,
 					left 0.3s ease-out 0.7s;
 		
