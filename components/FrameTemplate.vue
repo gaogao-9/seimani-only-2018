@@ -1,14 +1,14 @@
 <template>
-	<el-container>
-		<el-container>
-			<el-header><main-header :isAsideOpened="isAsideOpened"></main-header></el-header>
-			<el-main>
+	<div class="container row">
+		<div class="container col">
+			<header id="header"><main-header :isAsideOpened="isAsideOpened"></main-header></header>
+			<main id="main">
 				<slot></slot>
-			</el-main>
-			<el-footer><main-footer></main-footer></el-footer>
-		</el-container>
-		<el-aside :class="{hide: !isAsideOpened}" width="200px"><main-aside></main-aside></el-aside>
-	</el-container>
+			</main>
+			<footer id="footer"><main-footer></main-footer></footer>
+		</div>
+		<menu id="menu" :class="{hide: !isAsideOpened}"><main-aside></main-aside></menu>
+	</div>
 </template>
 
 <script>
@@ -31,19 +31,50 @@ export default {
 </script>
 
 <style>
-.el-container {
-	min-height: 100vh;
-}
-.el-header {
-	display: flex;
-	align-items: center;
-	background-color: #285473;
+:root {
+	font-size: 16px;
 }
 
-.el-footer {
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	&.row {
+		display: flex;
+		overflow: hidden;
+		& > * {
+			width: 100%;
+		}
+	}
+	&.col {
+		min-height: 100vh;
+	}
+}
+#header {
 	display: flex;
 	align-items: center;
+	height: 60px;
+	line-height: 1;
 	background-color: #285473;
+	
+	&>* {
+		padding: 0 15px;
+	}
+	
+	& h1 {
+		font-size: 1.5rem;
+	}
+}
+
+#footer {
+	display: flex;
+	align-items: center;
+	height: 60px;
+	background-color: #285473;
+	
 	&>* {
 		width: 100%;
 		vertical-align: middle;
@@ -52,8 +83,11 @@ export default {
 	}
 }
 
-.el-aside {
+#menu {
 	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 200px;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -62,14 +96,14 @@ export default {
 	z-index: 114514;
 }
 
-.el-main {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+#main {
+	flex: auto;
+	padding: 20px 0;
 	overflow: hidden;
 	box-sizing: border-box;
 	z-index: 1000;
+	min-height: calc(100vh - 60px - 60px);
+	width: 100%;
 	background-image:
 		linear-gradient(transparent 80%, rgba(255, 255, 255, 0.3) 80%, rgba(255, 255, 255, 0.3) 100%),
 		linear-gradient(90deg, transparent 80%, rgba(255, 255, 255, 0.3) 80%, rgba(255, 255, 255, 0.3) 100%);
@@ -78,8 +112,8 @@ export default {
 	background-color: #4881a9;
 
 	&>* {
+		margin: 0 auto;
 		width: 280px;
-		height: 100%;
 		transition: width 0.2s ease-out 0s;
 		
 		&:not(:first-child) {
@@ -89,31 +123,31 @@ export default {
 }
 
 @media screen and (min-width:360px) {
-	.el-main>* {
+	#main>* {
 		width: 320px;
 	}
 }
 
 @media screen and (min-width:400px) {
-	.el-main>* {
+	#main>* {
 		width: 360px;
 	}
 }
 
 @media screen and (min-width:480px) {
-	.el-main>* {
+	#main>* {
 		width: 440px;
 	}
 }
 
 @media screen and (min-width:640px) {
-	.el-main>* {
+	#main>* {
 		width: 600px;
 	}
 }
 
 @media screen and (max-width:840px) {
-	.el-aside {
+	#menu {
 		position: fixed;
 		&.hide {
 			right: -200px;
@@ -122,13 +156,13 @@ export default {
 }
 
 @media screen and (min-width:1040px) {
-	.el-main>* {
+	#main>* {
 		width: 800px;
 	}
 }
 
 @media screen and (min-width:1240px) {
-	.el-main>* {
+	#main>* {
 		width: 1000px;
 	}
 }

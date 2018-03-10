@@ -35,6 +35,7 @@ export default {
 <style scoped>
 .mainContainer {
 	position: relative;
+	height: calc(100vh - 60px - 60px - 20px - 20px);
 	
 	& .logo {
 		display: flex;

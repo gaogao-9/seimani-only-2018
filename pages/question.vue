@@ -5,7 +5,7 @@
 				<p>各質問は随時更新予定です。</p>
 				<div v-for="({name, list}, parentId) in qa">
 					<h1>{{name}}</h1>
-					<ul>
+					<ul class="qaLink">
 						<ul v-for="({q: question, a: answer}, id) in list">
 							<li>
 								<a :href="`#qa-${parentId}-${id}`">{{question}}</a>
@@ -119,21 +119,25 @@ export default {
 </script>
 <style>
 
+.qaLink {
+	margin-left: 1.5rem;
+}
+
 .qaList {
 	list-style: none;
-	
+	margin-left: 1.5rem;
 	& li {
 		position: relative;
 		
 		&.question:before {
 			position: absolute;
-			left: -1.5em;
+			left: -1.5rem;
 			content: "Q. ";
 		}
 		
 		&.answer:before {
 			position: absolute;
-			left: -1.5em;
+			left: -1.5rem;
 			content: "A. ";
 		}
 	}

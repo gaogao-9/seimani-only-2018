@@ -41,18 +41,7 @@ module.exports = {
 	/*
 	** Build configuration
 	*/
-	plugins: [
-		"~plugins/element-ui",
-		{
-			src: "~plugins/element-ui",
-			ssr: false,
-		},
-	],
-	css: [
-		"element-ui/lib/theme-chalk/index.css",
-	],
 	build: {
-		vendor: ["element-ui"],
 		/*
 		** Run ESLint on save
 		*/
