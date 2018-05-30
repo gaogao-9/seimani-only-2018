@@ -42,6 +42,11 @@ import FrameTemplate from "~/components/FrameTemplate.vue";
 import Card from "~/components/Card.vue";
 
 export default {
+	head() {
+		return {
+			title: this.title,
+		};
+	},
 	data: () => ({
 		title: "運営メンバー紹介",
 		isShow: false,

@@ -21,6 +21,11 @@ import FrameTemplate from "~/components/FrameTemplate.vue";
 import Card from "~/components/Card.vue";
 
 export default {
+	head() {
+		return {
+			title: this.title,
+		};
+	},
 	data: () => ({
 		title: "アクセス",
 	}),

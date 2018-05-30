@@ -21,6 +21,7 @@ export default {
 		menus: [
 			"top",
 			"access",
+			"circle",
 			"staff",
 			"question",
 		].map((name) => ({
