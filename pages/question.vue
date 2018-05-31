@@ -281,7 +281,7 @@ export default {
 						{
 							type: "answer",
 							icon: "smile2",
-							text: "そればかりは、私にはどうにもならないから、戦挙管理委員会にメールかTwitterで連絡を取るといいわ。できる限りで答えてくれるはずよ。<br>このQ&Aも随時更新予定という話だから、チェックしておいて。",
+							text: "そればかりは、私にはどうにもならないから、戦挙管理委員会にメール(seimani.only[at]gmail.com)か<a target=\"_blank\" href=\"https://twitter.com/seimani_only\">Twitter</a>で連絡を取るといいわ。できる限りで答えてくれるはずよ。<br>このQ&Aも随時更新予定という話だから、チェックしておいて。",
 						},
 					],
 				],
