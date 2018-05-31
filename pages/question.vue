@@ -4,7 +4,7 @@
 			<card :title="title">
 				<p>(2018.05.31 更新)</p>
 				<div v-for="([name, list], parentId) in questionList">
-					<h1>{{name}}</h1>
+					<h2>{{name}}</h2>
 					<ul class="qaLink">
 						<ul v-for="(question, id) in list">
 							<li>
@@ -119,7 +119,7 @@ export default {
 						{
 							type: "answer",
 							icon: "thinking",
-							text: "調整中。後日、お知らせがあるようね。",
+							text: "あくまで予定だけれど、12時に開場、14時で一度終了して、それからアフターイベントがあるようね。搬入開始の時刻などはサークル参加案内に記載があるから、サークルとして参加する総理はそこを見るといいわ。",
 						},
 					],
 					[
@@ -217,8 +217,8 @@ export default {
 						},
 						{
 							type: "answer",
-							icon: "smile2",
-							text: "サークル募集の際にお知らせがあるわ。できる限りで割高感はない金額のようだから安心して。サークル参加者にも、入場チケット代わりのアイテムを配る予定みたいね。",
+							icon: "default",
+							text: "1スペース3500円よ。詳しくは、サークル参加案内をしっかりと読むこと。",
 						},
 					],
 					[
@@ -230,7 +230,7 @@ export default {
 						{
 							type: "answer",
 							icon: "thinking",
-							text: "調整中よ。可能な場合は、募集の際にその旨お知らせがあるらしいわ。",
+							text: "可能よ。後日、サークル参加を申し込んだ総理の元に詳細な連絡が行くことになっているから、それを待つように。",
 						},
 					],
 					[
