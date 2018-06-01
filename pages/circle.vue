@@ -126,7 +126,7 @@ export default {
 ※アナログ原稿およびオフラインでのサークルカット受付は行いません。`.split("\n"),
 				link: {
 					text: "サークルカットテンプレート(ZIP形式)",
-					href: "/dl/circle_cut.zip",
+					href: "/dl/cut_win.zip",
 				},
 			},
 			{
