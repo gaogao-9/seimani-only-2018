@@ -11,7 +11,7 @@
     "_generate": "cross-env NODE_ENV=production nuxt generate",
     "generate": "npm run _generate && cp ./generator/.git.tmp ./dist/.git && cp ./generator/CNAME.tmp ./dist/CNAME",
     "lint": "eslint --fix --ext .js,.vue --ignore-path .eslintignore .gitignore .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint && npm run generate"
   },
   "dependencies": {
     "nuxt": "^1.4.0"

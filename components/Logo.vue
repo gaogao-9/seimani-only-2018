@@ -1,9 +1,6 @@
 <template>
 	<div class="logo" :class="{ show: isShow }">
 	<p>
-		2018年秋<br>政剣マニフェスティア<br>
-		非公式 オンリーイベント<br>
-		特設サイト
 	</p>
 	</div>
 </template>
@@ -26,6 +23,7 @@ export default {
 }
 
 .logo{
+  color: white;
   text-align: center;
   font-size : 4.94vw;
   font-family: "Makinas-Scrap-5";

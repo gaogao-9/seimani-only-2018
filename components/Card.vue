@@ -22,6 +22,7 @@ export default {
 <style>
 .card {
 	box-sizing: border-box;
+	margin: 20px auto !important;
 	padding: 10px;
 	background-color: white;
 	border: 1px solid #ccc;

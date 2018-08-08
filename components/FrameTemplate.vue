@@ -2,7 +2,7 @@
 	<div class="container row">
 		<div class="container col">
 			<header id="header"><main-header :isAsideOpened="isAsideOpened"></main-header></header>
-			<main id="main">
+			<main class="main">
 				<slot></slot>
 			</main>
 			<footer id="footer"><main-footer></main-footer></footer>
@@ -30,7 +30,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 :root {
 	font-size: 16px;
 }
@@ -56,7 +56,7 @@ export default {
 #header {
 	display: flex;
 	align-items: center;
-	height: 60px;
+	height: 70px;
 	line-height: 1;
 	background-color: #285473;
 	
@@ -96,13 +96,12 @@ export default {
 	z-index: 114514;
 }
 
-#main {
+.main {
 	flex: auto;
-	padding: 20px 0;
 	overflow: hidden;
 	box-sizing: border-box;
 	z-index: 1000;
-	min-height: calc(100vh - 60px - 60px);
+	min-height: calc(100vh - 70px - 60px);
 	width: 100%;
 	background-image:
 		linear-gradient(transparent 80%, rgba(255, 255, 255, 0.3) 80%, rgba(255, 255, 255, 0.3) 100%),
@@ -123,25 +122,25 @@ export default {
 }
 
 @media screen and (min-width:360px) {
-	#main>* {
+	.main>* {
 		width: 320px;
 	}
 }
 
 @media screen and (min-width:400px) {
-	#main>* {
+	.main>* {
 		width: 360px;
 	}
 }
 
 @media screen and (min-width:480px) {
-	#main>* {
+	.main>* {
 		width: 440px;
 	}
 }
 
 @media screen and (min-width:640px) {
-	#main>* {
+	.main>* {
 		width: 600px;
 	}
 }
@@ -156,13 +155,13 @@ export default {
 }
 
 @media screen and (min-width:1040px) {
-	#main>* {
+	.main>* {
 		width: 800px;
 	}
 }
 
 @media screen and (min-width:1240px) {
-	#main>* {
+	.main>* {
 		width: 1000px;
 	}
 }

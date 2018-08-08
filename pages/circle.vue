@@ -36,7 +36,7 @@
 			</div>
 		</card>
 		<card>
-			<button class="registerButton" @click="register">上記内容を熟読した上で参加登録を行う</button>
+			<button class="registerButton" @click="register" disabled>参加受付を終了しました。</button>
 		</card>
 	</frame-template>
 </template>
@@ -62,7 +62,8 @@ export default {
 			},
 			{
 				title: "イベント名",
-				text: "「政剣マニフェスティア」非公式オンリーイベント（仮称）".split("\n"),
+				text: `政剣マニフェスティアオンリー同人誌即売会緊急交流会イベント
+				漕ぎ出せ！ソクバイ海 ～関係ないけど、アイムソウリー！～`.split("\n"),
 			},
 			{
 				title: "日程・会場",
