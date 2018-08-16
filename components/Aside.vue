@@ -22,6 +22,8 @@ export default {
 			"top",
 			"access",
 			"circle",
+			"cosplay",
+			"flyer",
 			"staff",
 			"question",
 		].map((name) => ({
