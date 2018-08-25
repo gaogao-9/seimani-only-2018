@@ -3,7 +3,7 @@
 		<h1 class="title">
 			<a v-if="titleStyle === 'short'" href="/"><p class="maintitle">漕ぎ出せ！ソクバイ海</p><p class="subtitle">～関係ないけど、アイムソウリー！～</p></a>
 			<a v-else-if="titleStyle === 'middle'" href="/"><p class="maintitle">政剣マニフェスティアオンリー同人誌即売会</p><p><span class="maintitle">漕ぎ出せ！ソクバイ海</span>&nbsp;<span class="subtitle">～関係ないけど、アイムソウリー！～</span></p></a>
-			<a v-else href="/"><p class="maintitle">政剣マニフェスティアオンリー同人誌即売会&nbsp;緊急交流会イベント</p><p><span class="maintitle">漕ぎ出せ！ソクバイ海</span>&nbsp;<span class="subtitle">～関係ないけど、アイムソウリー！～</span></p></a>
+			<a v-else href="/"><p class="maintitle">政剣マニフェスティアオンリー同人誌即売会&nbsp;緊急交流イベント</p><p><span class="maintitle">漕ぎ出せ！ソクバイ海</span>&nbsp;<span class="subtitle">～関係ないけど、アイムソウリー！～</span></p></a>
 		</h1>
 		<p class="menuOpenButton" @click="openMenu"><i class="fas fa-bars fa-2x"></i></p>
 	</div>
