@@ -21,6 +21,7 @@ export default {
 		menus: [
 			"top",
 			"access",
+			"common",
 			"circle",
 			"cosplay",
 			"flyer",
