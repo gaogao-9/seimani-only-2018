@@ -3,7 +3,7 @@ const shared = {
 	description: "政剣マニフェスティアオンリーイベント2018の公式サイトです",
 	image: "ogp_icon.jpg",
 	favicon: "favicon.ico",
-	origin: (process.env.NODE_ENV === "develop") ? `http://localhost${(process.env.PORT ? `:${process.env.PORT}` : "3000")}/` : "https://festia.moe/",
+	origin: (process.env.NODE_ENV === "develop") ? `http://localhost${(process.env.PORT ? `:${process.env.PORT}` : "3000")}/` : "https://only2018.festia.moe/",
 };
 
 module.exports = {
