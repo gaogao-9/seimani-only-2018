@@ -11,7 +11,7 @@
     "generate": "cross-env NODE_ENV=production nuxt generate",
     "lint": "eslint --fix --ext .js,.vue --ignore-path .eslintignore .gitignore .",
     "precommit": "npm run lint && npm run generate",
-    "deploy": "npm run generate && push-dir --dir=dist --branch=gh-pages"
+    "deploy": "npm run generate && push-dir --dir=dist --branch=gh-pages --overwrite-local"
   },
   "dependencies": {
     "nuxt": "^1.4.0"
